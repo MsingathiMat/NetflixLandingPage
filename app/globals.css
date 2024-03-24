@@ -17,13 +17,34 @@
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  
+  width: 100vw;
+  height:100vh;
+}
+
+@layer base{
+
+
+
+  input:focus~label, input:not(:placeholder-shown)~label{
+
+   top: 10px;
+   transform: scale(0.9);
+   left:15px
+  }
+
+  .CENTER{
+
+    @apply flex justify-center items-center
+  }
+
+  .HEROBG{
+
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+ background:linear-gradient(to bottom,rgba(0, 0, 0, 0.89),rgba(0,0,0,0.89)),url('https://i.etsystatic.com/18545205/r/il/dd33b8/3436419395/il_570xN.3436419395_jqd7.jpg');
+  }
 }
 
 @layer utilities {
